@@ -1,33 +1,58 @@
 # E-Commerce Data Engineering Project
 
-## Overview
-This project demonstrates a basic ETL pipeline using Python, Pandas, SQLite, and SQLAlchemy.
+##  Project Overview
 
-## Workflow
+This project demonstrates an end-to-end ETL pipeline for processing
+e-commerce sales data using Python, Pandas, and SQLite.
 
-1. Extract data from CSV
-2. Clean and transform data
-3. Load data into SQLite database
-4. Generate reports
+The pipeline extracts raw sales data from a CSV file, cleans and
+transforms the data, loads it into a SQLite database, and generates
+business analysis reports using SQL.
 
-## Technologies Used
+##  ETL Workflow
+
+CSV Dataset
+    ↓
+Extract
+    ↓
+Clean & Transform
+    ↓
+SQLite Database
+    ↓
+SQL Analysis
+    ↓
+Reports
+
+##  Technologies Used
 
 - Python
 - Pandas
+- SQL
 - SQLite
 - SQLAlchemy
 - Git
+- GitHub
 
-## Project Structure
+##  Project Structure
 
-dataset/
-database/
-scripts/
-reports/
-logs/
-
-## How to Run
-
-pip install -r requirements.txt
-
-python scripts/etl_pipeline.py
+```text
+ecommerce-data-engineering-project/
+│
+├── dataset/
+│   └── ecommerce_sales.csv
+│
+├── database/
+│   └── ecommerce.db
+│
+├── scripts/
+│   ├── etl_pipeline.py
+│   └── analysis.py
+│
+├── reports/
+│   ├── category_sales.csv
+│   ├── region_sales.csv
+│   ├── top_products.csv
+│   └── payment_sales.csv
+│
+├── requirements.txt
+└── README.md
