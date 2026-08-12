@@ -5,6 +5,11 @@ import sqlite3
 df = pd.read_csv(
     "dataset/ecommerce_sales.csv"
 )
+df["order_date"] = pd.to_datetime(df["order_date"])
+
+df = df.drop_duplicates()
+
+df["total_sales"] = df["price"] * df["quantity"]
 
 engine = create_engine(
     "sqlite:///database/ecommerce.db"
